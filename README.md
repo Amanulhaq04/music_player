@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aetheris - Premium Minimalist Music Player
 
 Aetheris is a sophisticated, minimalist web-based music player designed with a premium, organic aesthetic. It features high-contrast visuals, smooth transitions, and a curated sensory experience.
@@ -37,3 +38,7 @@ Aetheris is built on the principles of **clarity and separation**. By isolating 
 ---
 
 *Designed for the modern minimalist.*
+=======
+# music_player
+A simple and responsive Music Player built using HTML, CSS, and JavaScript. This project allows users to play, pause, skip songs, and enjoy a clean user-friendly interface with smooth controls and animations.  Features
+>>>>>>> 85da86d8a45e5708b05263ee419386609a590f67
