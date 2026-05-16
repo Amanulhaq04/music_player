@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheris - Pure Sound, Refined.</title>
+    <meta name="description"
+        content="Experience Aetheris: A minimalist music journey defined by pure sound and refined aesthetics.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Syncopate:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Global Background (Organic Grain Texture) -->
+    <div class="grain-overlay"></div>
+    <div class="dynamic-bg" id="dynamic-bg"></div>
+
+    <!-- 1. MINIMALIST SPLIT LANDING PAGE -->
+    <section id="landing-page" class="view-section active split-view">
+        <div class="landing-left">
+            <div class="image-frame">
+                <img src="image1.png" alt="Aetheris Minimalist" class="hero-image">
+                <div class="image-mask"></div>
+            </div>
+        </div>
+        <div class="landing-right">
+            <div class="landing-content">
+                <div class="brand-badge-minimal">AETHERIS SERIES</div>
+                <h1 class="landing-title-refined">Aetheris</h1>
+                <div class="aesthetic-info">
+                    <p class="branding-statement">Curated for the modern minimalist. Aetheris blends high-fidelity audio
+                        with a serene interface, offering an unparalleled sensory experience.</p>
+                </div>
+                <button id="enter-btn" class="enter-btn-aesthetic">
+                    <span>EXPLORE THE COLLECTION</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PLAYER VIEW SECTION -->
+    <section id="player-view" class="view-section">
+        <div class="player-container-refined">
+            <nav class="top-nav-refined">
+                <div class="nav-left">
+                    <span id="back-to-landing" class="minimal-text-back"><i class="fas fa-arrow-left"></i> BACK</span>
+                </div>
+                <div class="nav-center">
+                    <div class="nav-brand-centered">AETHERIS</div>
+                </div>
+                <div class="nav-right"></div>
+            </nav>
+
+            <main class="player-card-refined" id="tilt-card">
+                <div class="card-layout">
+                    <!-- Left: Visuals -->
+                    <div class="visual-side">
+                        <div class="artwork-circle">
+                            <div class="vinyl-holder" id="vinyl-wrapper">
+                                <img src="art1.png" alt="Album Art" id="track-img-main">
+                            </div>
+                            <!-- Circular Progress -->
+                            <svg class="minimal-progress" width="320" height="320">
+                                <circle class="line-bg" fill="transparent" r="155" cx="160" cy="160" />
+                                <circle class="line-active" id="progress-circle" fill="transparent" r="155" cx="160" cy="160" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Right: Info & Controls -->
+                    <div class="details-side">
+                        <div class="metadata-minimal">
+                            <h2 id="track-title" class="serif-title">Midnight Pulse</h2>
+                            <h3 id="track-artist" class="sans-artist">SynthWave Echo</h3>
+                        </div>
+
+                        <!-- Linear Progress Bar (For Interaction/Clarity) -->
+                        <div class="linear-progress-container" id="linear-progress-wrapper" style="width:100%; height:4px; background:rgba(0,0,0,0.05); border-radius:10px; cursor:pointer; margin-bottom:20px;">
+                            <div id="linear-progress-bar" style="height:100%; background:#000; width:0%; border-radius:10px;"></div>
+                        </div>
+
+                        <div class="playback-timer-minimal">
+                            <span id="current-time">0:00</span>
+                            <span class="timer-slash">/</span>
+                            <span id="total-duration">0:00</span>
+                        </div>
+
+                        <!-- Minimal Pulse EQ -->
+                        <div class="minimal-eq" id="visualizer">
+                            <div class="eq-dot"></div><div class="eq-dot"></div><div class="eq-dot"></div><div class="eq-dot"></div>
+                            <div class="eq-dot"></div><div class="eq-dot"></div><div class="eq-dot"></div><div class="eq-dot"></div>
+                        </div>
+
+                        <!-- Controls Section -->
+                        <div class="controls-refined">
+                            <button id="shuffle" class="utility-btn" title="Shuffle"><i class="fas fa-shuffle"></i></button>
+                            <button id="prev" class="utility-btn" title="Previous"><i class="fas fa-backward"></i></button>
+                            <button id="play-pause" class="master-control-btn" title="Play">
+                                <i class="fas fa-play" id="play-icon"></i>
+                            </button>
+                            <button id="next" class="utility-btn" title="Next"><i class="fas fa-forward"></i></button>
+                            <button id="repeat" class="utility-btn" title="Repeat"><i class="fas fa-repeat"></i></button>
+                        </div>
+
+                        <!-- Volume Slider -->
+                        <div class="volume-slider-refined">
+                            <i class="fas fa-volume-off"></i>
+                            <div class="track-minimal" id="volume-wrapper">
+                                <div class="fill-minimal" id="volume-slider"></div>
+                            </div>
+                            <i class="fas fa-volume-high"></i>
+                        </div>
+
+                        <button id="playlist-btn" class="open-queue-trigger">VIEW COLLECTION</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Inner Playlist (inside player card) -->
+    <div class="inner-playlist" id="inner-playlist">
+        <div class="inner-header">
+            <h3>THE COLLECTION</h3>
+            <button id="close-inner-playlist">×</button>
+        </div>
+        <ul class="inner-song-list" id="inner-playlist-items">
+            <!-- Items injected by JS -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
